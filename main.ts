@@ -1,9 +1,11 @@
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSprite) {
+    music.playTone(262, music.beat(BeatFraction.Half))
     info.changeScoreBy(1)
     pizzaa.setPosition(randint(0, 160), randint(0, 120))
     info.startCountdown(3)
 })
 let pizzaa: Sprite = null
+music.baDing.play()
 scene.setBackgroundColor(0)
 let mySprite = sprites.create(img`
     . . . . 5 5 5 5 5 5 5 5 . . . . 
